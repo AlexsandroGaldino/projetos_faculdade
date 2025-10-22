@@ -1,0 +1,96 @@
+/* Estilos globais e tema (paleta verde) */
+:root{
+  --max-width:1100px;
+  --gap:1rem;
+  --brand:#2a9d8f;      /* verde principal */
+  --brand-dark:#1f7b67; /* verde escuro */
+  --bg:#ffffff;
+  --muted:#eef6f4;
+  --border:#e6e6e6;
+  --text:#111;
+  --radius:8px;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  margin:0;padding:0;line-height:1.5;background:var(--bg);color:var(--text);
+  -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
+}
+.container{max-width:var(--max-width);margin:0 auto;padding:1.25rem}
+
+/* Header aprimorado */
+.site-header{
+  background:linear-gradient(180deg, #ffffff 0%, rgba(42,157,143,0.06) 40%, rgba(42,157,143,0.08) 100%);
+  border-bottom:1px solid var(--border);
+  padding:.65rem 0;
+  box-shadow:0 6px 18px rgba(31,123,103,0.04);
+  position:sticky;top:0;z-index:40;
+}
+.site-header .container{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.logo{font-weight:800;text-decoration:none;color:var(--brand-dark);font-size:1.125rem}
+
+/* Navegação */
+.main-nav ul{list-style:none;margin:0;padding:0;display:flex;gap:.6rem;align-items:center}
+.main-nav a{color:var(--brand-dark);text-decoration:none;padding:.5rem .7rem;border-radius:6px;transition:all .15s ease}
+.main-nav a:hover,.main-nav a:focus{background:var(--brand);color:#fff;transform:translateY(-1px);box-shadow:0 6px 12px rgba(31,123,103,0.08)}
+
+/* Destaque no header (ex: botão Doe) */
+.site-header .cta{background:var(--brand);color:#fff;padding:.45rem .75rem;border-radius:10px;text-decoration:none;font-weight:600}
+.site-header .cta:hover{background:var(--brand-dark)}
+
+/* Hero */
+.hero{padding:2.4rem 0;background:linear-gradient(180deg, rgba(42,157,143,0.03), rgba(42,157,143,0))}
+.hero h1{margin:0 0 .5rem;font-size:1.6rem}
+.hero p{margin:0 0 .75rem;color:#23493f}
+.hero .btn{display:inline-block;margin-top:0.5rem;padding:.6rem 1rem;border-radius:10px;background:var(--brand);color:#fff;text-decoration:none;box-shadow:0 6px 18px rgba(31,123,103,0.08)}
+.hero .btn:hover{background:var(--brand-dark)}
+
+/* Projects grid */
+.projects-list{display:grid;grid-template-columns:1fr;gap:1rem}
+.project-card{border:1px solid var(--border);padding:1rem;border-radius:var(--radius);background:#fff}
+.project-card img{max-width:100%;height:auto;border-radius:6px;display:block}
+
+/* Forms */
+form{background:transparent}
+label{display:block;margin:0.6rem 0 .25rem;font-weight:600;color:#123d34}
+input[type="text"],input[type="email"],input[type="tel"],input[type="date"],select,textarea{
+  width:100%;padding:.6rem .75rem;border:1px solid var(--border);border-radius:8px;background:#fff;color:var(--text);font-size:0.95rem
+}
+textarea{resize:vertical}
+.form-actions{display:flex;gap:1rem;margin-top:1rem}
+.btn{padding:.55rem .9rem;border-radius:8px;border:none;background:var(--brand);color:#fff;cursor:pointer}
+.btn-secondary{background:#f1f1f1;color:var(--text)}
+.btn:hover{background:var(--brand-dark)}
+
+/* Footer */
+.site-footer{background:var(--muted);padding:1.1rem;margin-top:2rem;border-top:1px solid var(--border)}
+.site-footer a{color:var(--brand-dark);text-decoration:none}
+
+/* Accessibility focus */
+:focus{outline:3px solid rgba(31,123,103,0.18);outline-offset:3px}
+
+/* Responsive */
+@media(min-width:700px){
+  .projects-list{grid-template-columns:repeat(2,1fr)}
+  .hero h1{font-size:2rem}
+}
+
+@media(max-width:699px){
+  .site-header .container{flex-direction:column;align-items:flex-start}
+  .main-nav ul{flex-wrap:wrap}
+}
+
+/* Small UI tweaks */
+ul{padding-left:1.1rem}
+a{transition:color .15s ease}
+
+/* Utility */
+.text-center{text-align:center}
+
+/* Form validation subtle visual */
+input:invalid,select:invalid,textarea:invalid{border-color:#d66;box-shadow:0 0 0 3px rgba(214,102,102,0.06)}
+
+/* Improve images presentation */
+figure{margin:0}
+figcaption{font-size:.9rem;color:#55766f;margin-top:.35rem}
