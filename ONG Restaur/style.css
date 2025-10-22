@@ -19,7 +19,7 @@ body{
 }
 .container{max-width:var(--max-width);margin:0 auto;padding:1.25rem}
 
-/* Header aprimorado */
+
 .site-header{
   background:linear-gradient(180deg, #ffffff 0%, rgba(42,157,143,0.06) 40%, rgba(42,157,143,0.08) 100%);
   border-bottom:1px solid var(--border);
