@@ -1,12 +1,3 @@
-// app.js — funcionalidades avançadas para a plataforma ONG
-// Recursos implementados:
-// - Menu acessível (hamburguer) responsivo
-// - Filtro dinâmico de projetos (busca + categoria)
-// - Validação do formulário com integração ViaCEP
-// - Modais e toasts simples
-// - Máscaras para CPF/telefone/CEP
-// - Smooth scroll para âncoras
-
 document.addEventListener('DOMContentLoaded', function () {
   // helpers
   function qs(sel, ctx) { return (ctx || document).querySelector(sel); }
